@@ -4,7 +4,7 @@
 ================
 Airbass70
 
-Telemetry script per leggere la descrizione completa dei campi in funzione del loro metaindice.
+Telemetry script per ottenere la descrizione completa ed il valore dei field di edgetx in funzione del loro metaindice.
 Usare lo stick thr su e giu per cambiare l'indice
 Ogni tanto ci sono delle posizioni vuote.
 --]]
@@ -12,15 +12,14 @@ Ogni tanto ci sono delle posizioni vuote.
 local Field_id			--metaindice del campo
 local Field_name		--nome del campo
 local field_desc		--descrizione del campo
-local ThrId					--Metaindice dello stick thr
-local t0						--lettura tempo dal precedente incremento/decremento dell'indice a
-local t1						--lettura tempo da controllare 
-local a							--indice da ottenere
+local ThrId				--Metaindice dello stick thr
+local t0				--lettura tempo dal precedente incremento/decremento dell'indice a
+local t1				--lettura tempo da controllare 
+local a					--indice da ottenere
 
 local function init()
-	ThrId = getFieldInfo("thr").id	--ottiene il metaindece dal campo thr. getFieldInfo restiruisce una --
-																	--tabella record da cui peschiamo il field name "id", oppure        --
-																	--restituisce nil se non trova niente.                              --         
+	--ottiene il metaindece dal campo thr. getFieldInfo restiruisce una tabella record da cui peschiamo il field name "id", oppure nil se non trova niente.
+	ThrId = getFieldInfo("thr").id
 	t0 = 0
 	a=1					-- cambiare a piacimento per scandagliare più in alto
 end
