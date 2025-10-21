@@ -46,7 +46,7 @@ local function run ()
 		field_desc = getFieldInfo(a).desc		
 
 		lcd.drawText(10,10,"id:",SMLSIZE)
-		lcd.drawText(60,10,"val:",SMLSIZE)l
+		lcd.drawText(60,10,"val:",SMLSIZE)
 		lcd.drawText(10,30,"name:",SMLSIZE)
 		lcd.drawText(10,50,"Desc:",SMLSIZE)
 		lcd.drawNumber(40,10,Field_id,SMLSIZE)
