@@ -28,7 +28,7 @@ local function run ()
 	--comanda indice a
 	t1 = getTime()
 	ThrVal = getValue(ThrId)	-- ottiene il valore di thr
-	Speed=ThrVal/2048			--step per centesimo di secondo
+	Speed=ThrVal/1000			--step per centesimo di secondo
 	if ThrVal >0 and t1>t0+(1/Speed) then
 		a=a+1
 		t0=t1
